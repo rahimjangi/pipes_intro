@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// import { MileToKilometerPipe } from './mile-to-kilometer.pipe';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,8 @@ export class AppComponent {
   currencyPipe = '';
   decimalPipe = '';
   percentPipe = '';
+  jsonObj = {};
+  mile:number=0;
 
   onNameChange(e:any) {
     this.datePipe = e.target.value;
@@ -35,5 +38,16 @@ export class AppComponent {
   }
   getPercentPipe(e: any) {
     this.percentPipe = e.target.value;
+  }
+  getJson(e: any) {
+    this.jsonObj= {
+      first_name: "rahim",
+      last_name: "jangi",
+      age:39
+    };
+  }
+
+  getMile(e: any) {
+    this.mile = parseFloat(e.target.value);
   }
 }

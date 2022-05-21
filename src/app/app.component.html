@@ -1,77 +1,116 @@
-<div class="container">
-  <h3>Angular Pipes</h3>
-  <form>
-    <div class="form-group row">
+<div class="container ">
+  <h3 class="text-center">Angular Pipes</h3>
 
-      <div class="col col-sm-6">
-        <label for="DatePipe" class="col-form-label">DatePipe</label>
-        <div class="col-sm-6">
-          <input type="date" class="form-control" id="DatePipe" (input)="getDatePipe($event)">
+  <div class="container border border-primary rounded p-3 m-auto">
+    
+    <form >
+      <div class="form-group ">
+
+          <div class="row">
+            <div class="col col-sm-6 ">
+              <label for="DatePipe" class="col-form-label">DatePipe</label>
+              <div class="col-sm-6 ">
+                <input type="date" class="form-control text-center" id="DatePipe" (input)="getDatePipe($event)">
+              </div>
+            </div>
+            <div class="col">
+              <label class="col-form-label">DatePipe</label>
+              <h3>{{ datePipe | date :'short' }}</h3>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col col-sm-6">
+              <label for="DatePipe" class="col-form-label">UpperCasePipe</label>
+              <div class="col-sm-6">
+                <input class="form-control" id="DatePipe" (input)="getUpperCasePipe($event)">
+              </div>
+            </div>
+            <div class="col">
+              <label class="col-form-label">UpperCasePipe</label>
+              <h3>{{upperCasePipe | uppercase}}</h3>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col col-sm-6">
+              <label for="DatePipe" class="col-form-label">LowerCasePipe</label>
+              <div class="col-sm-6">
+                <input class="form-control" id="DatePipe" (input)="getLowerCasePipe($event)">
+              </div>
+            </div>
+            <div class="col">
+              <label class="col-form-label">LowerCasePipe</label>
+              <h3>{{lowerCasePipe | lowercase}}</h3>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col col-sm-6">
+              <label for="DatePipe" class="col-form-label">CurrencyPipe</label>
+              <div class="col-sm-6">
+                <input class="form-control" id="DatePipe" (input)="getCurrencyPipe($event)">
+              </div>
+            </div>
+            <div class="col">
+              <label class="col-form-label">CurrencyPipe</label>
+              <h3>{{currencyPipe | currency:"JPY"}}</h3>
+            </div>
+          </div>
+
+        <div class="row">
+          <div class="col col-sm-6">
+            <label for="DatePipe" class="col-form-label">DecimalPipe</label>
+            <div class="col-sm-6">
+              <input class="form-control" id="DatePipe" (input)="getDecimalPipe($event)">
+            </div>
+          </div>
+          <div class="col">
+            <label class="col-form-label">DecimalPipe</label>
+            <h3>{{decimalPipe | number}}</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-sm-6">
+            <label for="DatePipe" class="col-form-label">PercentPipe</label>
+            <div class="col-sm-6">
+              <input type="number" class="form-control" id="DatePipe" (input)="getPercentPipe($event)">
+            </div>
+          </div>
+          <div class="col">
+            <label class="col-form-label">PercentPipe</label>
+            <h3>{{percentPipe | percent}}</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-sm-6">
+            <label for="DatePipe" class="col-form-label">JSON</label>
+            <div class="col-sm-6">
+              <input type="number" class="form-control" id="DatePipe" (input)="getJson($event)">
+            </div>
+          </div>
+          <div class="col">
+            <label class="col-form-label">JSON</label>
+            <h3>{{jsonObj | json}}</h3>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col col-sm-6">
+            <label for="DatePipe" class="col-form-label">Mile</label>
+            <div class="col-sm-6">
+              <input type="number" class="form-control" id="DatePipe" (input)="getMile($event)">
+            </div>
+          </div>
+          <div class="col">
+            <label class="col-form-label">Kilometer</label>
+            <h3>{{mile | mileToKilometer}}</h3>
+          </div>
         </div>
       </div>
-      <div class="col">
-        <label class="col-form-label">DatePipe</label>
-        <h3>{{ datePipe | date :'short' }}</h3>
-      </div>
 
-      <div class="col col-sm-6">
-        <label for="DatePipe" class="col-form-label">UpperCasePipe</label>
-        <div class="col-sm-6">
-          <input class="form-control" id="DatePipe" (input)="getUpperCasePipe($event)">
-        </div>
-      </div>
-      <div class="col">
-        <label class="col-form-label">UpperCasePipe</label>
-        <h3>{{upperCasePipe | uppercase}}</h3>
-      </div>
-
-      <div class="col col-sm-6">
-        <label for="DatePipe" class="col-form-label">LowerCasePipe</label>
-        <div class="col-sm-6">
-          <input class="form-control" id="DatePipe" (input)="getLowerCasePipe($event)">
-        </div>
-      </div>
-      <div class="col">
-        <label class="col-form-label">LowerCasePipe</label>
-        <h3>{{lowerCasePipe | lowercase}}</h3>
-      </div>
-
-      <div class="col col-sm-6">
-        <label for="DatePipe" class="col-form-label">CurrencyPipe</label>
-        <div class="col-sm-6">
-          <input class="form-control" id="DatePipe" (input)="getCurrencyPipe($event)">
-        </div>
-      </div>
-      <div class="col">
-        <label class="col-form-label">CurrencyPipe</label>
-        <h3>{{currencyPipe | currency}}</h3>
-      </div>
-
-      <div class="col col-sm-6">
-        <label for="DatePipe" class="col-form-label">DecimalPipe</label>
-        <div class="col-sm-6">
-          <input class="form-control" id="DatePipe" (input)="getDecimalPipe($event)">
-        </div>
-      </div>
-      <div class="col">
-        <label class="col-form-label">DecimalPipe</label>
-        <h3>{{decimalPipe | number}}</h3>
-      </div>
-
-      <div class="col col-sm-6">
-        <label for="DatePipe" class="col-form-label">PercentPipe</label>
-        <div class="col-sm-6">
-          <input type="number" class="form-control" id="DatePipe" (input)="getPercentPipe($event)">
-        </div>
-      </div>
-      <div class="col">
-        <label class="col-form-label">PercentPipe</label>
-        <h3>{{percentPipe | percent}}</h3>
-      </div>
-
-
-
-    </div>
-
-  </form>
+    </form>
+  </div>
 </div>
